@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Animations using Anime js | How to make Animated Website</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <section>
+    <img src="./images/stars.png" alt="stars background" id="stars">
+    <img src="./images/moon.png" alt="moon" id="moon">
+    <img src="./images/mountains_behind.png" alt="mountain behind" id="mountains_behind">
+    <h2 id="text">Anime<span>JS</span></h2>
+    <a href="#" id="btn">Play</a>
+    <img src="./images/mountains_front.png" alt="mountain front" id="mountains_front">
+  </section>
+  <script src="./anime.min.js"></script>
+  <script>
+    let animation = anime.timeline({
+      autoplay: false
+    });
+    animation
+    .add({
+      targets: '#btn',
+      top: '1500px',
+      duration: 500,
+      easing: 'easeInOutSine',
+    })
+    .add({
+      targets: '#stars',
+      top: '0px',
+      duration: 1000,
+      easing: 'easeInOutSine',
+    })
+    .add({
+      targets: '#mountains_behind',
+      bottom: '0px',
+      duration: 1000,
+      easing: 'easeInOutSine',
+    })
+    .add({
+      targets: '#moon',
+      top: '0px',
+      duration: 1000,
+      easing: 'easeInOutBack',
+    })
+    .add({
+      targets: '#mountains_front',
+      bottom: '-25px',
+      duration: 1000,
+      easing: 'easeInOutSine',
+    })
+    .add({
+      targets: '#text',
+      duration: 1000,
+      marginRight: 0,
+      easing: 'easeInOutSine',
+    })
+    .add({
+      targets: '#btn',
+      top: '50%',
+      duration: 1000,
+      easing: 'easeInOutBack',
+    })
+
+    document.querySelector('#btn').onclick = animation.play
+  </script>
+</body>
+</html>
