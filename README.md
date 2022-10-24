@@ -2,7 +2,7 @@
 
 This is a simple but cool timeline animation using Anime JS lib.
 
-I practiced here positions, transformations, the CSS mix-blend-mode property, shadows, translation animations and several animation effects using the Anime JS library.
+I practiced here positions, transformations, the CSS mix-blend-mode property and several animation effects using the Anime JS library.
 
 Colorful and elegant HTML, CSS and JS code.
 
